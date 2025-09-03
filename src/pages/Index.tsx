@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,13 +8,14 @@ import TestimonialCard from "@/components/TestimonialCard";
 import ProjectGallery from "@/components/ProjectGallery";
 import heroImage from "@/assets/hero-services.jpg";
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-
 // Import service images
 import plumbingImage from "@/assets/service-plumbing.jpg";
 import paintingImage from "@/assets/service-painting.webp";
 import waterproofingImage from "@/assets/service-waterproofing.jpg";
 import carpentryImage from "@/assets/service-carpentry.webp";
 import architecturalImage from "@/assets/service-architectural.jpg";
+import logo from "@/assets/Kaamkarlologo.png";
+import { px } from "framer-motion";
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -98,7 +100,7 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border/50 z-50 shadow-sm">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="font-bold text-2xl relative group">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Kaam<span>karlo.com</span></span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"><img width="80px" height="50px" src={logo} alt="logo" /></span>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
           </div>
           
@@ -131,7 +133,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section - Simplified but Attractive Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen mt-2 flex items-center justify-center overflow-hidden">
         {/* Clean Background with Subtle Effect */}
         <div className="absolute inset-0">
           <div className="absolute inset-0">
@@ -150,7 +152,7 @@ const Index = () => {
         </div>
         
         {/* Content Container with Clean Design */}
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center mt-6 text-white px-4 max-w-4xl mx-auto">
           {/* Elegant Badge */}
           <div className="mb-8 inline-block">
             <span className="inline-flex items-center px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
@@ -161,10 +163,9 @@ const Index = () => {
           </div>
           
           {/* Clean Headline */}
-          <div className="mb-6">
+          <div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-              <span className="block mb-2 text-white">The</span>
-              <span className="block mb-2 text-white">Client <span className="text-secondary">Company</span></span>
+              <span className="block mb-2 text-white">KaamKarlo.com</span>
             </h1>
           </div>
           
@@ -395,7 +396,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="space-y-6">
               <div className="font-bold text-2xl relative inline-block">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">The Client Company</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">KaamKarlo.com</span>
                 <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
               </div>
               <p className="text-muted-foreground">
@@ -498,7 +499,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-border/30 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} The Client Company. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} KaamKarlo.com. All rights reserved.</p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <a href="#" className="text-sm hover:text-primary transition-colors duration-300">Privacy Policy</a>
               <a href="#" className="text-sm hover:text-primary transition-colors duration-300">Terms of Service</a>
